@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator App</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="theme-l"> 
+
+<div class="wrapper">
+
+  <!-- <button id="theme-toggle" class="theme-btn">Change Theme</button> -->
+   <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+
+  <!-- LEFT SIDE -->
+  <div class="left">
+    <div class="badge">
+      <div class="badge-dot"></div>
+      FEATURED PROJECT
+    </div>
+    
+
+    <h1 class="title">Calculator <span>App</span></h1>
+    <div class="divider"></div>
+
+    <p class="desc">A clean, responsive calculator with a modern UI. Performs basic arithmetic operations with real-time calculations.</p>
+
+    <div class="tags">
+      <div class="tag tag-html">
+        <div class="tag-icon">H</div> HTML
+      </div>
+      <div class="tag tag-css">
+        <div class="tag-icon">C</div> CSS
+      </div>
+      <div class="tag tag-js">
+        <div class="tag-icon">JS</div> JavaScript
+      </div>
+    </div>
+
+    <div class="buttons-row">
+     
+       <a href="https://github.com/vijayy-kumar"target="_blank"class="btn-live">Github<i class="fas fa-arrow-up-right-from-square"></i></a>
+     
+       <a href="https://github.com/vijayy-kumar/project"target="_blank"class="btn-code">View Code<i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="socials">
+       <a href="https://github.com/vijayy-kumar" class="social-icon"><i class="fab fa-github"></i></a>
+       <a href="https://linkedin.com/in/thevijaykumar" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+       <a href="https://instagram.com/vijay.kumarr_" class="social-icon"><i class="fab fa-instagram"></i></a>
+       <a href="mailto:imvksdr@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+    </div>
+    
+</div>
+
+<!-- RIGHT SIDE - CALCULATOR -->
+<div class="calc-wrap">
+  <div class="calc-glow"></div>
+    <div class="calculator">
+
+      <div class="display">
+        <div class="expression" id="expression"></div>
+        <div class="result" id="result">0</div>
+      </div>
+
+      <div class="buttons">
+        <!-- Row 1 -->
+        <button class="btn btn-fn" onclick="clearAll()">AC</button>
+        <button class="btn btn-fn" onclick="toggleSign()">+/−</button>
+        <button class="btn btn-fn" onclick="percent()">%</button>
+        <button class="btn btn-op" onclick="setOp('÷')">÷</button>
+
+        <!-- Row 2 -->
+        <button class="btn btn-num" onclick="input('7')">7</button>
+        <button class="btn btn-num" onclick="input('8')">8</button>
+        <button class="btn btn-num" onclick="input('9')">9</button>
+        <button class="btn btn-op" onclick="setOp('×')">×</button>
+
+        <!-- Row 3 -->
+        <button class="btn btn-num" onclick="input('4')">4</button>
+        <button class="btn btn-num" onclick="input('5')">5</button>
+        <button class="btn btn-num" onclick="input('6')">6</button>
+        <button class="btn btn-op" onclick="setOp('−')">−</button>
+
+        <!-- Row 4 -->
+        <button class="btn btn-num" onclick="input('1')">1</button>
+        <button class="btn btn-num" onclick="input('2')">2</button>
+        <button class="btn btn-num" onclick="input('3')">3</button>
+        <button class="btn btn-op" onclick="setOp('+')">+</button>
+
+        <!-- Row 5 -->
+        <button class="btn btn-num btn-zero" onclick="input('0')">0</button>
+        <button class="btn btn-num" onclick="inputDot()">.</button>
+        <button class="btn btn-op btn-eq" onclick="calculate()">=</button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

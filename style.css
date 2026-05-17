@@ -1,0 +1,495 @@
+/* ===========================
+   CSS Variables & Reset
+=========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0a0f1a;
+  --card-bg: #111827;
+  --btn-dark: #1e2535;
+  --btn-hover: #252d3f;
+  --orange: #f5a623;
+  --orange-hover: #e0951a;
+  --cyan: #00d4ff;
+  --text-white: #ffffff;
+  --text-gray: #6b7a99;
+  --display-bg: #0e131d;
+  --radius: 18px;
+}
+
+
+/* =========================
+   THEME : L MODE
+========================= */
+
+.theme-l{
+  --bg:#0a0f1a;
+  --card-bg:#111827;
+  --btn-dark:#1e2535;
+  --btn-hover:#252d3f;
+  --orange:#f5a623;
+  --orange-hover:#e0951a;
+  --cyan:#00d4ff;
+  --text-white:#ffffff;
+  --text-gray:#6b7a99;
+  --display-bg:#0e131d;
+}
+
+/* =========================
+   THEME : AYANOKOJI MODE
+========================= */
+
+.theme-ayanokoji{
+  --bg:#0d0d0d;
+  --card-bg:#161616;
+  --btn-dark:#222;
+  --btn-hover:#2d2d2d;
+  --orange:#9ca3af;
+  --orange-hover:#d1d5db;
+  --cyan:#ffffff;
+  --text-white:#f3f4f6;
+  --text-gray:#9ca3af;
+  --display-bg:#111111;
+}
+
+/* =========================
+   THEME : KIRA MODE
+========================= */
+
+.theme-kira{
+  --bg:#140a18;
+  --card-bg:#1f1027;
+  --btn-dark:#2b1636;
+  --btn-hover:#3b2248;
+  --orange:#a855f7;
+  --orange-hover:#c084fc;
+  --cyan:#e879f9;
+  --text-white:#faf5ff;
+  --text-gray:#c4b5fd;
+  --display-bg:#180f20;
+}
+
+#theme-toggle{
+   position:absolute;
+   top:20px;
+   right:20px;
+   padding: 6px 8px;
+}
+
+#theme-toggle:hover{
+
+   transform:
+   rotate(20deg)
+   scale(1.08);
+
+   background:rgba(0,212,255,0.12);
+
+   color:white;
+
+   box-shadow:
+   0 0 12px rgba(0,212,255,0.35),
+   0 0 24px rgba(0,212,255,0.15);
+}
+#theme-toggle:active{
+   transform:scale(0.92);
+}
+
+
+/* ===========================
+   Base / Body
+=========================== */
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  padding: 20px;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(0, 212, 255, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(245, 166, 35, 0.04) 0%, transparent 60%);
+}
+
+/* ===========================
+   Wrapper
+=========================== */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ===========================
+   Left Panel
+=========================== */
+.left {
+  flex: 1;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 50px;
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--cyan);
+  width: fit-content;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* Title */
+.title {
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.title span {
+  color: var(--cyan);
+}
+
+/* Divider */
+.divider {
+  width: 40px;
+  height: 3px;
+  background: var(--cyan);
+  border-radius: 2px;
+}
+
+/* Description */
+.desc {
+  font-size: 15px;
+  color: var(--text-gray);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Tech Tags */
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-white);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tag-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.tag-html .tag-icon { background: #e34c26; }
+.tag-css  .tag-icon { background: #264de4; }
+.tag-js   .tag-icon { background: #f0db4f; color: #000; }
+
+/* Action Buttons */
+.buttons-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: var(--cyan);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Outfit', sans-serif;
+  text-decoration: none;
+}
+
+.btn-live:hover {
+  background: #00bde8;
+  transform: translateY(-1px);
+}
+
+.btn-code {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: transparent;
+  color: var(--text-white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Outfit', sans-serif;
+  text-decoration: none;
+}
+
+.btn-code:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Social Icons */
+.socials {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-gray);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.social-icon:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+
+
+
+
+
+/* ===========================
+   Calculator Wrapper & Glow
+=========================== */
+.calc-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.calc-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--cyan), transparent 50%, rgba(0, 212, 255, 0.2));
+  z-index: 0;
+}
+
+/* ===========================
+   Calculator Body
+=========================== */
+.calculator {
+  position: relative;
+  z-index: 1;
+  background: #12161f;
+  border-radius: 26px;
+  padding: 20px;
+  width: 320px;
+  box-shadow:
+    0 0 0 1px rgba(0, 212, 255, 0.2),
+    0 0 40px rgba(0, 212, 255, 0.15),
+    0 25px 60px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ===========================
+   Display
+=========================== */
+.display {
+  background: var(--display-bg);
+  border-radius: 14px;
+  padding: 16px 18px;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.expression {
+  font-size: 13px;
+  color: var(--text-gray);
+  font-weight: 400;
+  min-height: 18px;
+  word-break: break-all;
+  text-align: right;
+}
+
+.result {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1;
+  letter-spacing: -1px;
+  transition: all 0.1s;
+}
+
+/* ===========================
+   Button Grid
+=========================== */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  height: 68px;
+  border: none;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active {
+  transform: scale(0.93);
+}
+
+/* Number buttons */
+.btn-num {
+  background: var(--btn-dark);
+  color: var(--text-white);
+}
+
+.btn-num:hover {
+  background: var(--btn-hover);
+}
+
+/* Function buttons (AC, +/-, %) */
+.btn-fn {
+  background: #2a3142;
+  color: var(--text-white);
+  font-size: 17px;
+}
+
+.btn-fn:hover {
+  background: #323c52;
+}
+
+/* Operator buttons */
+.btn-op {
+  background: var(--orange);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);
+}
+
+.btn-op:hover {
+  background: var(--orange-hover);
+  box-shadow: 0 4px 20px rgba(245, 166, 35, 0.4);
+}
+
+/* Zero button spans 2 columns */
+.btn-zero {
+  grid-column: span 2;
+  justify-content: flex-start;
+  padding-left: 26px;
+}
+
+/* Equals button */
+.btn-eq {
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);
+}
+
+.btn-eq:hover {
+  background: var(--orange-hover);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 780px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .left {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badge    { align-self: center; }
+  .divider  { align-self: center; }
+  .tags     { justify-content: center; }
+  .buttons-row { justify-content: center; }
+  .socials  { justify-content: center; }
+
+}
+
+@media (max-width: 380px) {
+  .calculator { width: 290px; padding: 16px; }
+  .btn        { height: 60px; font-size: 18px; }
+  .result     { font-size: 36px; }
+}
