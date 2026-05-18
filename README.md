@@ -80,11 +80,9 @@ Open index.html in your browser
 
 # 🌐 Live Demo
 
-🔗 Add your live demo link here
 
-```bash
 https://web-calculator-projects.netlify.app/
-```
+
 
 ---
 
