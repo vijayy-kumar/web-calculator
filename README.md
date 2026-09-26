@@ -129,8 +129,8 @@ This project is licensed under the MIT License.
 
 ### Vijay Kumar
 
-* GitHub: [https://github.com/vijayy-kumar](https://github.com/vijayy-kumar)
-* Email: [mailto: imvksdr@gmail.com)
+* GitHub: [https://github.com/vijayy-kumar]
+* Email: imvksdr@gmail.com
 
 ---
 
