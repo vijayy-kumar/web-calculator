@@ -130,7 +130,7 @@ This project is licensed under the MIT License.
 ### Vijay Kumar
 
 * GitHub: [https://github.com/vijayy-kumar](https://github.com/vijayy-kumar)
-* Portfolio: [https://your-portfolio-link.com](https://your-portfolio-link.com)
+* Email: [mailto: imvksdr@gmail.com)
 
 ---
 
